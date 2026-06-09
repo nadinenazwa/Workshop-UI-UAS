@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja | Tutorin</title>
+    <meta name="description" content="Lihat dan kelola item di keranjang belanjamu sebelum melanjutkan ke pembayaran.">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/transaksi.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                Tutor<span>in</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="index.html#fitur">Fitur</a>
+                <a href="index.html#tutor">Cari Tutor</a>
+                <a href="produk.html">Produk Belajar</a>
+                <a href="artikel.html">Artikel</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline btn-sm">Masuk</a>
+                <a href="daftar.html" class="btn btn-primary btn-sm">Daftar</a>
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Keranjang Belanja</h1>
+            <p>Cek kembali item pilihanmu, atur jumlah, lalu lanjutkan ke pembayaran dalam hitungan detik.</p>
+        </div>
+    </section>
+
+    <main class="container" style="padding-top: 2rem;">
+
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Beranda</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>Keranjang</span>
+        </nav>
+
+        <!-- Step Indicator -->
+        <div class="step-indicator" role="navigation" aria-label="Langkah checkout">
+            <div class="step active">
+                <span class="step-circle">1</span>
+                <span class="step-label">Keranjang</span>
+            </div>
+            <span class="step-line"></span>
+            <div class="step">
+                <span class="step-circle">2</span>
+                <span class="step-label">Pembayaran</span>
+            </div>
+            <span class="step-line"></span>
+            <div class="step">
+                <span class="step-circle">3</span>
+                <span class="step-label">Selesai</span>
+            </div>
+        </div>
+
+        <!-- Cart Layout -->
+        <div class="cart-layout">
+
+            <!-- Cart Table -->
+            <section class="cart-table-wrapper" aria-label="Daftar item keranjang">
+                <table class="cart-table" id="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Produk</th>
+                            <th>Harga</th>
+                            <th>Jumlah</th>
+                            <th>Subtotal</th>
+                            <th>Hapus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Item 1 -->
+                        <tr id="cart-row-1">
+                            <td>
+                                <div class="cart-item-info">
+                                    <img src="https://placehold.co/72x72/F8FAFC/7C3AED?text=UTBK" alt="Buku UTBK" class="cart-item-img">
+                                    <div class="cart-item-details">
+                                        <h4>Super Master UTBK SNBT 2024</h4>
+                                        <span class="cart-item-cat">Buku Persiapan</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Harga">
+                                <span class="cart-price">Rp 125.000</span>
+                            </td>
+                            <td data-label="Jumlah">
+                                <div class="cart-qty">
+                                    <button type="button" aria-label="Kurangi">−</button>
+                                    <input type="number" value="1" min="1" max="99" aria-label="Jumlah">
+                                    <button type="button" aria-label="Tambah">+</button>
+                                </div>
+                            </td>
+                            <td data-label="Subtotal">
+                                <span class="cart-price">Rp 125.000</span>
+                            </td>
+                            <td>
+                                <button class="cart-remove" aria-label="Hapus item" id="remove-1">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <!-- Item 2 -->
+                        <tr id="cart-row-2">
+                            <td>
+                                <div class="cart-item-info">
+                                    <img src="https://placehold.co/72x72/F8FAFC/7C3AED?text=Planner" alt="Study Planner" class="cart-item-img">
+                                    <div class="cart-item-details">
+                                        <h4>Study Planner Aesthetic 2024</h4>
+                                        <span class="cart-item-cat">Stationery</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Harga">
+                                <span class="cart-price">Rp 65.000</span>
+                            </td>
+                            <td data-label="Jumlah">
+                                <div class="cart-qty">
+                                    <button type="button" aria-label="Kurangi">−</button>
+                                    <input type="number" value="2" min="1" max="99" aria-label="Jumlah">
+                                    <button type="button" aria-label="Tambah">+</button>
+                                </div>
+                            </td>
+                            <td data-label="Subtotal">
+                                <span class="cart-price">Rp 130.000</span>
+                            </td>
+                            <td>
+                                <button class="cart-remove" aria-label="Hapus item" id="remove-2">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <!-- Item 3 -->
+                        <tr id="cart-row-3">
+                            <td>
+                                <div class="cart-item-info">
+                                    <img src="https://placehold.co/72x72/F8FAFC/7C3AED?text=E-Book" alt="E-Book Web Dev" class="cart-item-img">
+                                    <div class="cart-item-details">
+                                        <h4>E-Book Dasar Pemrograman Web</h4>
+                                        <span class="cart-item-cat">E-Book</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Harga">
+                                <span class="cart-price">Rp 89.000</span>
+                            </td>
+                            <td data-label="Jumlah">
+                                <div class="cart-qty">
+                                    <button type="button" aria-label="Kurangi">−</button>
+                                    <input type="number" value="1" min="1" max="99" aria-label="Jumlah">
+                                    <button type="button" aria-label="Tambah">+</button>
+                                </div>
+                            </td>
+                            <td data-label="Subtotal">
+                                <span class="cart-price">Rp 89.000</span>
+                            </td>
+                            <td>
+                                <button class="cart-remove" aria-label="Hapus item" id="remove-3">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Summary Sidebar -->
+            <aside class="cart-summary">
+                <div class="summary-card" id="cart-summary-card">
+                    <h3><i class="fa-solid fa-receipt" style="color: var(--primary); margin-right: 0.5rem;"></i>Ringkasan Belanja</h3>
+
+                    <div class="summary-row">
+                        <span class="label">Subtotal (4 item)</span>
+                        <span class="value">Rp 344.000</span>
+                    </div>
+                    <div class="summary-row discount">
+                        <span class="label">Diskon</span>
+                        <span class="value">− Rp 0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="label">Estimasi Ongkir</span>
+                        <span class="value">Gratis</span>
+                    </div>
+
+                    <hr class="summary-divider">
+
+                    <div class="summary-row total">
+                        <span class="label">Total</span>
+                        <span class="value">Rp 344.000</span>
+                    </div>
+
+                    <a href="pembayaran.html" class="btn btn-primary" id="btn-checkout">
+                        Lanjut ke Pembayaran <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="produk.html" class="btn btn-outline" id="btn-continue-shopping">
+                        <i class="fa-solid fa-arrow-left"></i> Lanjut Belanja
+                    </a>
+
+                    <div class="summary-note">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span>Gratis ongkir untuk pembelian pertama!</span>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Tutor<span>in</span>
+                    </a>
+                    <p>Platform edukasi terpadu yang membantu pelajar Indonesia mencapai potensi maksimal melalui bimbingan tutor, akses buku, dan materi pembelajaran yang berkualitas.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="index.html#tutor">Cari Tutor</a></li>
+                        <li><a href="produk.html">Toko Buku & Alat</a></li>
+                        <li><a href="artikel.html">Artikel Edukasi</a></li>
+                        <li><a href="#">Daftar Jadi Tutor</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Perusahaan</h4>
+                    <ul>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Karir</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Bantuan</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Pusat Bantuan</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tutorin. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Qty controls inside cart
+        document.querySelectorAll('.cart-qty').forEach(ctrl => {
+            const minus = ctrl.querySelector('button:first-child');
+            const plus = ctrl.querySelector('button:last-child');
+            const input = ctrl.querySelector('input');
+
+            minus.addEventListener('click', () => {
+                const v = parseInt(input.value) || 1;
+                if (v > 1) input.value = v - 1;
+            });
+            plus.addEventListener('click', () => {
+                const v = parseInt(input.value) || 1;
+                if (v < 99) input.value = v + 1;
+            });
+        });
+
+        // Remove buttons
+        document.querySelectorAll('.cart-remove').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const row = btn.closest('tr');
+                if (row) {
+                    row.style.opacity = '0';
+                    row.style.transform = 'translateX(20px)';
+                    row.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                    setTimeout(() => row.remove(), 300);
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>

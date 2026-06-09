@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Produk Belajar | Tutorin</title>
+    <meta name="description" content="Temukan buku modul, e-book, dan paket kelas terlengkap untuk mendukung proses belajarmu di Tutorin.">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/produk.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                Tutor<span>in</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="index.html#fitur">Fitur</a>
+                <a href="index.html#tutor">Cari Tutor</a>
+                <a href="produk.html" class="active">Produk Belajar</a>
+                <a href="artikel.html">Artikel</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline btn-sm">Masuk</a>
+                <a href="daftar.html" class="btn btn-primary btn-sm">Daftar</a>
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Katalog Produk Belajar</h1>
+            <p>Lengkapi kebutuhan akademismu dengan koleksi buku modul, e-book, dan paket kelas berkualitas yang telah dikurasi oleh tim Tutorin.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container" style="padding: 2rem 1.5rem 4rem;">
+
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Beranda</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>Katalog Produk</span>
+        </nav>
+
+        <!-- Toolbar -->
+        <div class="catalog-toolbar">
+            <p class="result-count">Menampilkan <strong>8</strong> produk</p>
+            <div class="catalog-sort">
+                <label for="sort-select">Urutkan:</label>
+                <select id="sort-select">
+                    <option value="popular">Terpopuler</option>
+                    <option value="newest">Terbaru</option>
+                    <option value="price-low">Harga Terendah</option>
+                    <option value="price-high">Harga Tertinggi</option>
+                    <option value="rating">Rating Tertinggi</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="catalog-grid">
+
+            <!-- Product 1 -->
+            <article class="product-card" id="card-utbk">
+                <div class="product-img">
+                    <span class="product-badge">Terlaris</span>
+                    <img src="https://placehold.co/280x220/F8FAFC/7C3AED?text=Buku+UTBK" alt="Super Master UTBK SNBT 2024">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Buku Persiapan</span>
+                    <h4><a href="produk-detail.html">Super Master UTBK SNBT 2024</a></h4>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <span class="score">4.8</span>
+                        <span class="reviews">(120)</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">Rp 125.000</span>
+                        <button class="btn-add-cart" id="btn-cart-utbk"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product 2 -->
+            <article class="product-card" id="card-planner">
+                <div class="product-img">
+                    <img src="https://placehold.co/280x220/F8FAFC/7C3AED?text=Study+Planner" alt="Study Planner Aesthetic 2024">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Stationery</span>
+                    <h4><a href="produk-detail.html">Study Planner Aesthetic 2024</a></h4>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="score">5.0</span>
+                        <span class="reviews">(89)</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">Rp 65.000</span>
+                        <button class="btn-add-cart" id="btn-cart-planner"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product 3 -->
+            <article class="product-card" id="card-kalkulator">
+                <div class="product-img">
+                    <span class="product-badge" style="background: var(--warning);">Diskon 20%</span>
+                    <img src="https://placehold.co/280x220/F8FAFC/7C3AED?text=Kalkulator" alt="Kalkulator Scientific FX-991EX">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Alat Tulis</span>
+                    <h4><a href="produk-detail.html">Kalkulator Scientific FX-991EX</a></h4>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <span class="score">4.6</span>
+                        <span class="reviews">(53)</span>
+                    </div>
+                    <div class="product-footer">
+                        <div class="price-group">
+                            <span class="price-old">Rp 350.000</span>
+                            <span class="product-price">Rp 280.000</span>
+                        </div>
+                        <button class="btn-add-cart" id="btn-cart-kalkulator"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product 4 -->
+            <article class="product-card" id="card-modul-bio">
+                <div class="product-img">
+                    <img src="https://placehold.co/280x220/F8FAFC/7C3AED?text=Modul+Biologi" alt="Modul Rangkuman Biologi SMA">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Modul Belajar</span>
+                    <h4><a href="produk-detail.html">Modul Rangkuman Biologi SMA</a></h4>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="score">4.9</span>
+                        <span class="reviews">(74)</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">Rp 45.000</span>
+                        <button class="btn-add-cart" id="btn-cart-bio"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product 5 -->
+            <article class="product-card" id="card-ebook-web">
+                <div class="product-img">
+                    <span class="product-badge" style="background: var(--primary);">E-Book</span>
+                    <img src="https://placehold.co/280x220/F8FAFC/7C3AED?text=E-Book+Web+Dev" alt="E-Book Dasar Pemrograman Web">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">E-Book</span>
+                    <h4><a href="produk-detail.html">E-Book Dasar Pemrograman Web</a></h4>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <span class="score">4.7</span>
+                        <span class="reviews">(210)</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">Rp 89.000</span>
+                        <button class="btn-add-cart" id="btn-cart-ebook"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product 6 -->
+            <article class="product-card" id="card-paket-intensif">
+                <div class="product-img">
+                    <span class="product-badge">Best Value</span>
+                    <img src="https://placehold.co/280x220/F8FAFC/7C3AED?text=Paket+Kelas" alt="Paket Kelas Intensif Matematika">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Paket Kelas</span>
+                    <h4><a href="produk-detail.html">Paket Kelas Intensif Matematika</a></h4>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="score">5.0</span>
+                        <span class="reviews">(156)</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">Rp 350.000</span>
+                        <button class="btn-add-cart" id="btn-cart-paket"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product 7 -->
+            <article class="product-card" id="card-flashcard">
+                <div class="product-img">
+                    <img src="https://placehold.co/280x220/F8FAFC/7C3AED?text=Flashcard" alt="Flashcard Bahasa Inggris">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Stationery</span>
+                    <h4><a href="produk-detail.html">Flashcard Vocabulary Bahasa Inggris</a></h4>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <span class="score">4.5</span>
+                        <span class="reviews">(42)</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="product-price">Rp 35.000</span>
+                        <button class="btn-add-cart" id="btn-cart-flashcard"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product 8 -->
+            <article class="product-card" id="card-ebook-fisika">
+                <div class="product-img">
+                    <span class="product-badge" style="background: var(--warning);">Diskon 15%</span>
+                    <img src="https://placehold.co/280x220/F8FAFC/7C3AED?text=Modul+Fisika" alt="Modul Fisika Kuantum Dasar">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Modul Belajar</span>
+                    <h4><a href="produk-detail.html">Modul Fisika Kuantum Dasar</a></h4>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <span class="score">4.8</span>
+                        <span class="reviews">(97)</span>
+                    </div>
+                    <div class="product-footer">
+                        <div class="price-group">
+                            <span class="price-old">Rp 75.000</span>
+                            <span class="product-price">Rp 63.750</span>
+                        </div>
+                        <button class="btn-add-cart" id="btn-cart-fisika"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="#" class="page-link" id="page-prev"><i class="fa-solid fa-chevron-left"></i></a>
+            <a href="#" class="page-link active" id="page-1">1</a>
+            <a href="#" class="page-link" id="page-2">2</a>
+            <a href="#" class="page-link" id="page-3">3</a>
+            <a href="#" class="page-link" id="page-next"><i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Tutor<span>in</span>
+                    </a>
+                    <p>Platform edukasi terpadu yang membantu pelajar Indonesia mencapai potensi maksimal melalui bimbingan tutor, akses buku, dan materi pembelajaran yang berkualitas.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="index.html#tutor">Cari Tutor</a></li>
+                        <li><a href="produk.html">Toko Buku & Alat</a></li>
+                        <li><a href="artikel.html">Artikel Edukasi</a></li>
+                        <li><a href="#">Daftar Jadi Tutor</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Perusahaan</h4>
+                    <ul>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Karir</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Bantuan</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Pusat Bantuan</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tutorin. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

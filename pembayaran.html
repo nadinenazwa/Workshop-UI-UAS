@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran | Tutorin</title>
+    <meta name="description" content="Selesaikan pembayaran pesananmu dengan cepat melalui metode pembayaran yang tersedia di Tutorin.">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/transaksi.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                Tutor<span>in</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="index.html#fitur">Fitur</a>
+                <a href="index.html#tutor">Cari Tutor</a>
+                <a href="produk.html">Produk Belajar</a>
+                <a href="artikel.html">Artikel</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline btn-sm">Masuk</a>
+                <a href="daftar.html" class="btn btn-primary btn-sm">Daftar</a>
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Pembayaran</h1>
+            <p>Pilih metode pembayaran yang paling praktis untukmu dan selesaikan transaksi dalam satu klik.</p>
+        </div>
+    </section>
+
+    <main class="container" style="padding-top: 2rem;">
+
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Beranda</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a href="keranjang.html">Keranjang</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>Pembayaran</span>
+        </nav>
+
+        <!-- Step Indicator -->
+        <div class="step-indicator" role="navigation" aria-label="Langkah checkout">
+            <div class="step done">
+                <span class="step-circle"><i class="fa-solid fa-check" style="font-size: 0.75rem;"></i></span>
+                <span class="step-label">Keranjang</span>
+            </div>
+            <span class="step-line done"></span>
+            <div class="step active">
+                <span class="step-circle">2</span>
+                <span class="step-label">Pembayaran</span>
+            </div>
+            <span class="step-line"></span>
+            <div class="step">
+                <span class="step-circle">3</span>
+                <span class="step-label">Selesai</span>
+            </div>
+        </div>
+
+        <!-- Payment Layout -->
+        <div class="payment-layout">
+
+            <!-- Left Column: Payment Methods -->
+            <div>
+                <!-- Shipping Address -->
+                <section class="payment-section" id="section-shipping">
+                    <h3><i class="fa-solid fa-location-dot" style="color: var(--primary); margin-right: 0.5rem;"></i>Alamat Pengiriman</h3>
+                    <p>Pastikan alamat pengiriman sudah benar.</p>
+                    <div class="shipping-info">
+                        <div class="shipping-icon">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+                        <div class="shipping-detail">
+                            <h4>Ahmad Rizky (Rumah)</h4>
+                            <p>Jl. Mawar No. 12, RT 03/RW 05, Kel. Sukajadi, Kec. Batam Kota, Kota Batam, Kepulauan Riau 29432</p>
+                            <p style="margin-top: 0.25rem;"><strong>0812-XXXX-XXXX</strong></p>
+                            <a class="edit-link" id="edit-address"><i class="fa-solid fa-pen" style="font-size: 0.6875rem;"></i> Ubah Alamat</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Payment Method -->
+                <section class="payment-section" id="section-payment-method">
+                    <h3><i class="fa-solid fa-wallet" style="color: var(--primary); margin-right: 0.5rem;"></i>Metode Pembayaran</h3>
+                    <p>Pilih cara bayar tercepat yang kamu suka.</p>
+
+                    <div class="payment-methods">
+                        <!-- QRIS -->
+                        <label class="payment-option selected" id="option-qris">
+                            <input type="radio" name="payment" value="qris" checked>
+                            <span class="payment-radio"></span>
+                            <div class="payment-option-icon qris">
+                                <i class="fa-solid fa-qrcode"></i>
+                            </div>
+                            <div class="payment-option-text">
+                                <h4>QRIS (E-Wallet)</h4>
+                                <p>GoPay, OVO, Dana, ShopeePay — scan & bayar instan</p>
+                            </div>
+                            <span class="payment-option-badge"><i class="fa-solid fa-bolt" style="margin-right: 0.25rem;"></i>Tercepat</span>
+                        </label>
+
+                        <!-- Transfer Bank -->
+                        <label class="payment-option" id="option-bank">
+                            <input type="radio" name="payment" value="bank">
+                            <span class="payment-radio"></span>
+                            <div class="payment-option-icon bank">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </div>
+                            <div class="payment-option-text">
+                                <h4>Transfer Bank</h4>
+                                <p>BCA, BNI, Mandiri, BRI — Virtual Account otomatis</p>
+                            </div>
+                        </label>
+
+                        <!-- COD -->
+                        <label class="payment-option" id="option-cod">
+                            <input type="radio" name="payment" value="cod">
+                            <span class="payment-radio"></span>
+                            <div class="payment-option-icon cod">
+                                <i class="fa-solid fa-money-bill-wave"></i>
+                            </div>
+                            <div class="payment-option-text">
+                                <h4>Bayar di Tempat (COD)</h4>
+                                <p>Bayar tunai saat pesanan sampai di rumah</p>
+                            </div>
+                        </label>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column: Order Summary -->
+            <aside class="order-summary-card">
+                <div class="summary-card" id="order-summary">
+                    <h3><i class="fa-solid fa-bag-shopping" style="color: var(--primary); margin-right: 0.5rem;"></i>Ringkasan Pesanan</h3>
+
+                    <!-- Mini item list -->
+                    <div class="order-item-mini">
+                        <img src="https://placehold.co/52x52/F8FAFC/7C3AED?text=UTBK" alt="Buku UTBK">
+                        <div class="item-name">
+                            <h5>Super Master UTBK SNBT 2024</h5>
+                            <span>1x</span>
+                        </div>
+                        <span class="item-price">Rp 125.000</span>
+                    </div>
+
+                    <div class="order-item-mini">
+                        <img src="https://placehold.co/52x52/F8FAFC/7C3AED?text=Planner" alt="Study Planner">
+                        <div class="item-name">
+                            <h5>Study Planner Aesthetic 2024</h5>
+                            <span>2x</span>
+                        </div>
+                        <span class="item-price">Rp 130.000</span>
+                    </div>
+
+                    <div class="order-item-mini">
+                        <img src="https://placehold.co/52x52/F8FAFC/7C3AED?text=E-Book" alt="E-Book Web Dev">
+                        <div class="item-name">
+                            <h5>E-Book Dasar Pemrograman Web</h5>
+                            <span>1x</span>
+                        </div>
+                        <span class="item-price">Rp 89.000</span>
+                    </div>
+
+                    <hr class="summary-divider" style="margin-top: 1rem;">
+
+                    <div class="summary-row">
+                        <span class="label">Subtotal</span>
+                        <span class="value">Rp 344.000</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="label">Ongkos Kirim</span>
+                        <span class="value" style="color: var(--success);">Gratis</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="label">Biaya Layanan</span>
+                        <span class="value">Rp 1.000</span>
+                    </div>
+
+                    <hr class="summary-divider">
+
+                    <div class="summary-row total">
+                        <span class="label">Total Bayar</span>
+                        <span class="value">Rp 345.000</span>
+                    </div>
+
+                    <!-- Confirm Button -->
+                    <div class="payment-confirm-area">
+                        <button class="btn btn-primary" id="btn-confirm-payment">
+                            <i class="fa-solid fa-lock" style="margin-right: 0.25rem;"></i> Konfirmasi Pembayaran
+                        </button>
+                        <div class="payment-secure">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>Transaksi aman & terenkripsi</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Tutor<span>in</span>
+                    </a>
+                    <p>Platform edukasi terpadu yang membantu pelajar Indonesia mencapai potensi maksimal melalui bimbingan tutor, akses buku, dan materi pembelajaran yang berkualitas.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="index.html#tutor">Cari Tutor</a></li>
+                        <li><a href="produk.html">Toko Buku & Alat</a></li>
+                        <li><a href="artikel.html">Artikel Edukasi</a></li>
+                        <li><a href="#">Daftar Jadi Tutor</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Perusahaan</h4>
+                    <ul>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Karir</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Bantuan</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Pusat Bantuan</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tutorin. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Payment method selection
+        const options = document.querySelectorAll('.payment-option');
+
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                options.forEach(o => o.classList.remove('selected'));
+                option.classList.add('selected');
+                const radio = option.querySelector('input[type="radio"]');
+                if (radio) radio.checked = true;
+            });
+        });
+
+        // Confirm button
+        const confirmBtn = document.getElementById('btn-confirm-payment');
+        if (confirmBtn) {
+            confirmBtn.addEventListener('click', () => {
+                confirmBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Memproses...';
+                confirmBtn.disabled = true;
+                confirmBtn.style.opacity = '0.7';
+
+                setTimeout(() => {
+                    confirmBtn.innerHTML = '<i class="fa-solid fa-circle-check"></i> Pembayaran Berhasil!';
+                    confirmBtn.style.background = 'var(--success)';
+                    confirmBtn.style.borderColor = 'var(--success)';
+                    confirmBtn.style.opacity = '1';
+                    confirmBtn.style.boxShadow = '0 10px 15px -3px rgba(16, 185, 129, 0.3)';
+                }, 2000);
+            });
+        }
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Akun | Tutorin</title>
+    <meta name="description" content="Buat akun Tutorin gratis dan mulai akses ribuan tutor, modul belajar, dan artikel edukasi.">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+    <div class="auth-wrapper">
+
+        <!-- Left Panel — Illustration -->
+        <section class="auth-left" aria-hidden="true">
+            <div class="auth-left-content">
+                <img
+                    src="https://placehold.co/360x280/FFFFFF/7C3AED?text=Gabung+Sekarang!"
+                    alt="Ilustrasi bergabung dengan Tutorin"
+                    class="auth-illustration"
+                >
+                <h2>Mulai Perjalanan Belajarmu</h2>
+                <p>Daftar gratis dan bergabung dengan 10.000+ pelajar yang sudah meningkatkan prestasi mereka bersama Tutorin.</p>
+
+                <div class="auth-trust-points">
+                    <div class="auth-trust-item">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>Pendaftaran cepat, kurang dari 1 menit</span>
+                    </div>
+                    <div class="auth-trust-item">
+                        <i class="fa-solid fa-gift"></i>
+                        <span>Gratis ongkir untuk pembelian pertama</span>
+                    </div>
+                    <div class="auth-trust-item">
+                        <i class="fa-solid fa-star"></i>
+                        <span>Akses artikel edukasi tanpa batas</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Panel — Register Form -->
+        <main class="auth-right">
+            <div class="auth-form-container">
+
+                <!-- Logo -->
+                <a href="index.html" class="auth-logo">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Tutor<span>in</span>
+                </a>
+
+                <!-- Header -->
+                <div class="auth-form-header">
+                    <h1>Buat Akun Baru</h1>
+                    <p>Isi data singkat di bawah dan mulai belajar sekarang.</p>
+                </div>
+
+                <!-- Form Card -->
+                <div class="auth-card">
+                    <form id="register-form" action="#" method="post" novalidate>
+
+                        <!-- Nama Lengkap -->
+                        <div class="form-group">
+                            <label for="reg-name">Nama Lengkap</label>
+                            <div class="input-wrapper">
+                                <input
+                                    type="text"
+                                    id="reg-name"
+                                    name="name"
+                                    placeholder="Masukkan nama lengkap"
+                                    autocomplete="name"
+                                    required
+                                >
+                                <i class="fa-regular fa-user input-icon"></i>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="reg-email">Email</label>
+                            <div class="input-wrapper">
+                                <input
+                                    type="email"
+                                    id="reg-email"
+                                    name="email"
+                                    placeholder="contoh@email.com"
+                                    autocomplete="email"
+                                    required
+                                >
+                                <i class="fa-regular fa-envelope input-icon"></i>
+                            </div>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="form-group">
+                            <label for="reg-password">Password</label>
+                            <div class="input-wrapper">
+                                <input
+                                    type="password"
+                                    id="reg-password"
+                                    name="password"
+                                    placeholder="Minimal 8 karakter"
+                                    autocomplete="new-password"
+                                    required
+                                    minlength="8"
+                                >
+                                <i class="fa-solid fa-lock input-icon"></i>
+                                <button type="button" class="toggle-password" id="toggle-reg-pw" aria-label="Tampilkan password">
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Konfirmasi Password -->
+                        <div class="form-group">
+                            <label for="reg-confirm">Konfirmasi Password</label>
+                            <div class="input-wrapper">
+                                <input
+                                    type="password"
+                                    id="reg-confirm"
+                                    name="confirm_password"
+                                    placeholder="Ulangi password"
+                                    autocomplete="new-password"
+                                    required
+                                >
+                                <i class="fa-solid fa-lock input-icon"></i>
+                                <button type="button" class="toggle-password" id="toggle-reg-confirm" aria-label="Tampilkan konfirmasi password">
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Terms checkbox -->
+                        <div class="form-extras" style="margin-bottom: 1.5rem;">
+                            <label class="checkbox-group">
+                                <input type="checkbox" id="agree-terms" name="terms" required>
+                                <span class="custom-checkbox"><i class="fa-solid fa-check"></i></span>
+                                <span class="checkbox-label">Saya setuju dengan <a href="#" style="color: var(--primary); font-weight: 600;">Syarat & Ketentuan</a></span>
+                            </label>
+                        </div>
+
+                        <!-- Submit -->
+                        <button type="submit" class="auth-submit" id="btn-register">
+                            Daftar Akun <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </form>
+
+                    <!-- Divider -->
+                    <div class="auth-divider">atau daftar dengan</div>
+
+                    <!-- Social Login -->
+                    <div class="social-login">
+                        <button type="button" class="social-btn" id="btn-google-register">
+                            <i class="fa-brands fa-google social-icon google"></i>
+                            Google
+                        </button>
+                        <button type="button" class="social-btn" id="btn-facebook-register">
+                            <i class="fa-brands fa-facebook-f social-icon facebook"></i>
+                            Facebook
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Footer link -->
+                <p class="auth-footer-text">
+                    Sudah punya akun? <a href="login.html">Login di sini</a>
+                </p>
+
+                <!-- Back to home -->
+                <a href="index.html" class="auth-back-home">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+                </a>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Toggle password visibility (both fields)
+        const toggles = [
+            { btn: 'toggle-reg-pw', input: 'reg-password' },
+            { btn: 'toggle-reg-confirm', input: 'reg-confirm' }
+        ];
+
+        toggles.forEach(({ btn, input }) => {
+            const toggleBtn = document.getElementById(btn);
+            const pwInput = document.getElementById(input);
+
+            if (toggleBtn && pwInput) {
+                toggleBtn.addEventListener('click', () => {
+                    const isPassword = pwInput.type === 'password';
+                    pwInput.type = isPassword ? 'text' : 'password';
+                    toggleBtn.querySelector('i').classList.toggle('fa-eye');
+                    toggleBtn.querySelector('i').classList.toggle('fa-eye-slash');
+                });
+            }
+        });
+
+        // Dummy form submit
+        const form = document.getElementById('register-form');
+        const submitBtn = document.getElementById('btn-register');
+
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                // Basic confirm-password check
+                const pw = document.getElementById('reg-password').value;
+                const confirm = document.getElementById('reg-confirm').value;
+
+                if (pw !== confirm) {
+                    alert('Password dan Konfirmasi Password tidak sama!');
+                    return;
+                }
+
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Membuat akun...';
+                submitBtn.disabled = true;
+                submitBtn.style.opacity = '0.7';
+
+                setTimeout(() => {
+                    submitBtn.innerHTML = '<i class="fa-solid fa-circle-check"></i> Akun Berhasil Dibuat!';
+                    submitBtn.style.background = 'var(--success)';
+                    submitBtn.style.opacity = '1';
+                    submitBtn.style.boxShadow = '0 10px 15px -3px rgba(16, 185, 129, 0.3)';
+
+                    setTimeout(() => {
+                        window.location.href = 'login.html';
+                    }, 1500);
+                }, 2000);
+            });
+        }
+    });
+    </script>
+</body>
+</html>
