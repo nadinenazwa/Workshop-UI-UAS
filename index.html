@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorin | Platform Belajar Terlengkap untuk Pelajar</title>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                Tutor<span>in</span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="active">Beranda</a>
+                <a href="#fitur">Fitur</a>
+                <a href="#tutor">Cari Tutor</a>
+                <a href="#produk">Produk Belajar</a>
+                <a href="#artikel">Artikel</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="btn btn-outline btn-sm">Masuk</button>
+                <button class="btn btn-primary btn-sm">Daftar</button>
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">🚀 Platform Edukasi No. 1</span>
+                <h1>Belajar Jadi Lebih <span>Mudah & Seru</span> Bersama Tutorin</h1>
+                <p>Temukan tutor terbaik, beli produk belajar terlengkap, dan baca artikel edukasi menarik hanya dalam satu platform.</p>
+                <div class="flex gap-4">
+                    <a href="#tutor" class="btn btn-primary">Cari Tutor Sekarang <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#produk" class="btn btn-outline">Lihat Katalog</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Gunakan placehold.co dengan warna brand untuk image dummy yang menarik -->
+                <img src="https://placehold.co/600x400/EDE9FE/7C3AED?text=Belajar+Bersama+Tutorin" alt="Hero Illustration">
+                
+                <div class="floating-card fc-1">
+                    <div class="fc-icon"><i class="fa-solid fa-star"></i></div>
+                    <div class="fc-text">
+                        <h4>4.9/5</h4>
+                        <p>Rating Tutor</p>
+                    </div>
+                </div>
+                
+                <div class="floating-card fc-2">
+                    <div class="fc-icon"><i class="fa-solid fa-users"></i></div>
+                    <div class="fc-text">
+                        <h4>10rb+</h4>
+                        <p>Pelajar Aktif</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="fitur" class="container">
+        <div class="section-title text-center">
+            <h2>Semua yang Kamu Butuhkan Ada Disini</h2>
+            <p>Tutorin hadir untuk memberikan solusi belajar yang komprehensif untuk mendukung prestasimu.</p>
+        </div>
+        
+        <div class="grid grid-cols-3">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                <h3>Marketplace Tutor</h3>
+                <p>Pilih tutor berpengalaman dari berbagai mata pelajaran sesuai kebutuhan dan gaya belajarmu.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-store"></i></div>
+                <h3>Toko Produk Belajar</h3>
+                <p>Beli buku, alat tulis, modul, hingga merchandise eksklusif dengan harga terjangkau.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+                <h3>Artikel Edukasi</h3>
+                <p>Akses gratis ke ratusan artikel tips belajar, info beasiswa, dan pengembangan diri.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutors Section -->
+    <section id="tutor" class="tutors">
+        <div class="container">
+            <div class="flex justify-between items-center section-title">
+                <div>
+                    <h2>Tutor Pilihan Minggu Ini</h2>
+                    <p>Belajar langsung dari ahlinya. Pilih tutor terbaikmu sekarang.</p>
+                </div>
+                <a href="tutor.html" class="btn btn-outline">Lihat Semua Tutor</a>
+            </div>
+            
+            <div class="grid grid-cols-4">
+                <!-- Tutor 1 -->
+                <div class="tutor-card">
+                    <img src="https://placehold.co/300x250/C4B5FD/4C1D95?text=Budi+Santoso" alt="Tutor" class="tutor-img">
+                    <div class="tutor-info">
+                        <h4>Budi Santoso, M.Si</h4>
+                        <span class="tutor-subject">Matematika & Fisika</span>
+                        <div class="tutor-rating">
+                            <i class="fa-solid fa-star"></i> 4.9 <span>(120 review)</span>
+                        </div>
+                        <div class="tutor-price">
+                            <span class="price">Rp 50.000<span style="font-size: 0.8rem; font-weight: normal;">/jam</span></span>
+                            <button class="btn btn-primary btn-sm">Pilih</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tutor 2 -->
+                <div class="tutor-card">
+                    <img src="https://placehold.co/300x250/C4B5FD/4C1D95?text=Siti+Aminah" alt="Tutor" class="tutor-img">
+                    <div class="tutor-info">
+                        <h4>Siti Aminah, S.Pd</h4>
+                        <span class="tutor-subject">Bahasa Inggris</span>
+                        <div class="tutor-rating">
+                            <i class="fa-solid fa-star"></i> 4.8 <span>(85 review)</span>
+                        </div>
+                        <div class="tutor-price">
+                            <span class="price">Rp 45.000<span style="font-size: 0.8rem; font-weight: normal;">/jam</span></span>
+                            <button class="btn btn-primary btn-sm">Pilih</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tutor 3 -->
+                <div class="tutor-card">
+                    <img src="https://placehold.co/300x250/C4B5FD/4C1D95?text=Andi+Wijaya" alt="Tutor" class="tutor-img">
+                    <div class="tutor-info">
+                        <h4>Andi Wijaya, B.Eng</h4>
+                        <span class="tutor-subject">Pemrograman Web</span>
+                        <div class="tutor-rating">
+                            <i class="fa-solid fa-star"></i> 5.0 <span>(200 review)</span>
+                        </div>
+                        <div class="tutor-price">
+                            <span class="price">Rp 75.000<span style="font-size: 0.8rem; font-weight: normal;">/jam</span></span>
+                            <button class="btn btn-primary btn-sm">Pilih</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tutor 4 -->
+                <div class="tutor-card">
+                    <img src="https://placehold.co/300x250/C4B5FD/4C1D95?text=Rina+Melati" alt="Tutor" class="tutor-img">
+                    <div class="tutor-info">
+                        <h4>Rina Melati, S.S</h4>
+                        <span class="tutor-subject">Sejarah & Sosiologi</span>
+                        <div class="tutor-rating">
+                            <i class="fa-solid fa-star"></i> 4.7 <span>(64 review)</span>
+                        </div>
+                        <div class="tutor-price">
+                            <span class="price">Rp 40.000<span style="font-size: 0.8rem; font-weight: normal;">/jam</span></span>
+                            <button class="btn btn-primary btn-sm">Pilih</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="produk" class="container">
+        <div class="flex justify-between items-center section-title">
+            <div>
+                <h2>Katalog Produk Belajar</h2>
+                <p>Lengkapi kebutuhan belajarmu dengan produk berkualitas.</p>
+            </div>
+            <a href="produk.html" class="btn btn-outline">Lihat Semua Produk</a>
+        </div>
+        
+        <div class="grid grid-cols-4">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <span class="product-badge">Terlaris</span>
+                    <img src="https://placehold.co/200x200/F8FAFC/7C3AED?text=Buku+UTBK" alt="Buku UTBK">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Buku Persiapan</span>
+                    <h4>Super Master UTBK SNBT 2024</h4>
+                    <p>Buku latihan soal lengkap dengan pembahasan komprehensif.</p>
+                    <div class="product-footer">
+                        <span class="product-price">Rp 125.000</span>
+                        <button class="btn btn-icon"><i class="fa-solid fa-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://placehold.co/200x200/F8FAFC/7C3AED?text=Planner" alt="Planner">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Stationery</span>
+                    <h4>Study Planner Aesthetic 2024</h4>
+                    <p>Jurnal belajar dengan desain elegan untuk mengatur jadwal harianmu.</p>
+                    <div class="product-footer">
+                        <span class="product-price">Rp 65.000</span>
+                        <button class="btn btn-icon"><i class="fa-solid fa-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <span class="product-badge" style="background: var(--warning);">Diskon 20%</span>
+                    <img src="https://placehold.co/200x200/F8FAFC/7C3AED?text=Kalkulator" alt="Kalkulator">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Alat Tulis</span>
+                    <h4>Kalkulator Scientific FX-991EX</h4>
+                    <p>Kalkulator canggih untuk memecahkan berbagai soal matematika rumit.</p>
+                    <div class="product-footer">
+                        <span class="product-price">Rp 280.000</span>
+                        <button class="btn btn-icon"><i class="fa-solid fa-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://placehold.co/200x200/F8FAFC/7C3AED?text=Modul" alt="Modul">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Modul Belajar</span>
+                    <h4>Modul Rangkuman Biologi SMA</h4>
+                    <p>Ringkasan materi biologi kelas 10-12 yang mudah dipahami.</p>
+                    <div class="product-footer">
+                        <span class="product-price">Rp 45.000</span>
+                        <button class="btn btn-icon"><i class="fa-solid fa-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section id="artikel" class="articles">
+        <div class="container">
+            <div class="flex justify-between items-center section-title">
+                <div>
+                    <h2>Artikel & Tips Belajar</h2>
+                    <p>Baca informasi terbaru seputar dunia pendidikan dan tips belajar jitu.</p>
+                </div>
+                <a href="artikel.html" class="btn btn-outline">Lihat Semua Artikel</a>
+            </div>
+            
+            <div class="grid grid-cols-3">
+                <!-- Article 1 -->
+                <div class="article-card">
+                    <img src="https://placehold.co/400x250/C4B5FD/4C1D95?text=Tips+SNBT" alt="Artikel" class="article-img">
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span><i class="fa-regular fa-calendar"></i> 12 Mei 2024</span>
+                            <span><i class="fa-regular fa-folder"></i> Tips Belajar</span>
+                        </div>
+                        <h4><a href="artikel-detail.html">7 Strategi Jitu Lolos SNBT di Kampus Impianmu</a></h4>
+                        <p class="text-muted">Persiapkan dirimu dari sekarang dengan strategi belajar yang tepat dan efektif untuk menembus PTN favorit...</p>
+                        <a href="artikel-detail.html" class="read-more mt-4">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Article 2 -->
+                <div class="article-card">
+                    <img src="https://placehold.co/400x250/C4B5FD/4C1D95?text=Manajemen+Waktu" alt="Artikel" class="article-img">
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span><i class="fa-regular fa-calendar"></i> 10 Mei 2024</span>
+                            <span><i class="fa-regular fa-folder"></i> Produktivitas</span>
+                        </div>
+                        <h4><a href="artikel-detail.html">Cara Mengatur Waktu Antara Belajar dan Organisasi</a></h4>
+                        <p class="text-muted">Aktif berorganisasi bukan berarti akademis terbengkalai. Temukan keseimbangan waktu yang tepat di sini...</p>
+                        <a href="artikel-detail.html" class="read-more mt-4">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Article 3 -->
+                <div class="article-card">
+                    <img src="https://placehold.co/400x250/C4B5FD/4C1D95?text=Beasiswa" alt="Artikel" class="article-img">
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span><i class="fa-regular fa-calendar"></i> 08 Mei 2024</span>
+                            <span><i class="fa-regular fa-folder"></i> Info Beasiswa</span>
+                        </div>
+                        <h4><a href="artikel-detail.html">Daftar Beasiswa S1 Tahun 2024 yang Wajib Kamu Coba</a></h4>
+                        <p class="text-muted">Jangan lewatkan kesempatan kuliah gratis! Berikut adalah rangkuman beasiswa dalam negeri yang sedang buka...</p>
+                        <a href="artikel-detail.html" class="read-more mt-4">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-container container">
+            <h2>Mulai Perjalanan Belajarmu Hari Ini</h2>
+            <p>Bergabunglah dengan ribuan pelajar lainnya yang telah meningkatkan prestasi akademis mereka bersama Tutorin.</p>
+            <button class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1.125rem;">Daftar Gratis Sekarang</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Tutor<span>in</span>
+                    </a>
+                    <p>Platform edukasi terpadu yang membantu pelajar Indonesia mencapai potensi maksimal melalui bimbingan tutor, akses buku, dan materi pembelajaran yang berkualitas.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="#tutor">Cari Tutor</a></li>
+                        <li><a href="#produk">Toko Buku & Alat</a></li>
+                        <li><a href="#artikel">Artikel Edukasi</a></li>
+                        <li><a href="#">Daftar Jadi Tutor</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Perusahaan</h4>
+                    <ul>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Karir</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Bantuan</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Pusat Bantuan</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tutorin. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
