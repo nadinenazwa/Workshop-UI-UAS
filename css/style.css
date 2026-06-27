@@ -4790,3 +4790,73 @@ select.form-control {
   justify-content: space-between;
   align-items: center;
 }
+/* ==========================================================================
+   RESPONSIVE LAYOUT (MOBILE & TABLET)
+   ========================================================================== */
+
+/* Batas maksimal lebar layar HP/Tablet standar (768px) */
+@media (max-width: 768px) {
+    
+    /* 1. Ubah semua Grid menjadi 1 Kolom ke bawah */
+    .grid-cols-2, 
+    .grid-cols-3, 
+    .grid-cols-4 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* 2. Perbaiki Navbar */
+    .nav-links, .nav-actions {
+        display: none; /* Sembunyikan menu desktop sementara */
+    }
+    .mobile-menu-btn {
+        display: block; /* Munculkan tombol hamburger menu (jika ada) */
+    }
+
+    /* 3. Perbaiki area Hero (Banner Utama) agar tidak menumpuk ke samping */
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem; /* Perkecil ukuran judul utama di HP */
+    }
+    
+    /* 4. Sembunyikan elemen melayang (floating card) agar tidak menutupi konten */
+    .floating-card {
+        display: none;
+    }
+
+    /* 5. Kurangi ruang/padding agar tidak terlalu longgar di layar kecil */
+    section {
+        padding: 3rem 0;
+    }
+    
+    .hero {
+        padding-top: 7rem;
+        padding-bottom: 3rem;
+    }
+    
+    /* 6. Perbaiki tombol harga dan produk agar tombolnya tidak bertabrakan */
+    .tutor-price {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .tutor-price .btn {
+        width: 100%; /* Tombol jadi memenuhi lebar kartu */
+    }
+}
+
+/* Batas untuk layar Handphone yang sangat kecil (480px ke bawah) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+}
