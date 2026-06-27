@@ -446,7 +446,7 @@ section {
 .tutor-img {
   width: 100%;
   aspect-ratio: 1 / 1;
-  height: auto;
+  height: unset;
   object-fit: cover;
   border-bottom: 3px solid var(--primary);
 }
@@ -523,7 +523,6 @@ section {
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 3;
-  height: auto;
   background-color: #f1f5f9;
   display: flex;
   align-items: center;
@@ -611,7 +610,7 @@ section {
 .article-img {
   width: 100%;
   aspect-ratio: 16 / 9;
-  height: auto;
+  height: unset;
   object-fit: cover;
 }
 
