@@ -4806,13 +4806,22 @@ select.form-control {
     }
 
     /* 2. Perbaiki Navbar */
-    .nav-links, .nav-actions {
-        display: none; /* Sembunyikan menu desktop sementara */
-    }
-    .mobile-menu-btn {
-        display: block; /* Munculkan tombol hamburger menu (jika ada) */
-    }
+.nav-links {
+    display: none; /* Sembunyikan link menu teks */
+}
 
+.nav-actions .btn {
+    display: none; /* Hanya sembunyikan tombol Masuk/Daftar, bukan pembungkusnya */
+}
+
+.mobile-menu-btn {
+    display: block; /* Munculkan tombol hamburger menu */
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-main);
+    cursor: pointer;
+}
     /* 3. Perbaiki area Hero (Banner Utama) agar tidak menumpuk ke samping */
     .hero-container {
         flex-direction: column;
