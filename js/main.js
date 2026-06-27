@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Jika user belum login, tampilkan alert dan
     // redirect otomatis ke login.html.
     // =============================================
-    const protectedPages = ['keranjang.html', 'pembayaran.html', 'history.html', 'sukses.html', 'booking.html', 'konfirmasi-booking.html'];
+    const protectedPages = ['keranjang.html', 'pembayaran.html', 'history.html', 'sukses.html', 'booking.html', 'konfirmasi-booking.html', 'profil.html'];
 
     // Ambil nama file halaman saat ini dari URL
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
@@ -644,5 +644,33 @@ document.addEventListener('DOMContentLoaded', () => {
             window.showDeleteModal(row);
         });
     });
+
+    // =============================================
+    // 16. PROFILE PAGE POPULATION
+    // =============================================
+    if (currentPage === 'profil.html' && isLoggedIn) {
+        const userName = localStorage.getItem('userName') || 'Siswa';
+        const userEmail = localStorage.getItem('userEmail') || 'siswa@tutorin.id';
+        
+        const profileNameEls = document.querySelectorAll('.profile-name, #fullname');
+        const profileEmailEls = document.querySelectorAll('.profile-email, #email');
+        const avatarInitial = document.querySelectorAll('.profile-avatar-wrapper .profile-avatar');
+        
+        profileNameEls.forEach(el => {
+            if (el.tagName === 'INPUT') el.value = userName;
+            else el.textContent = userName;
+        });
+        
+        profileEmailEls.forEach(el => {
+            if (el.tagName === 'INPUT') el.value = userEmail;
+            else el.textContent = userEmail;
+        });
+        
+        avatarInitial.forEach(el => {
+            if (el.tagName === 'IMG') {
+                el.src = `https://placehold.co/200x200/4F46E5/FFFFFF?text=${userName.charAt(0).toUpperCase()}`;
+            }
+        });
+    }
 
 });
