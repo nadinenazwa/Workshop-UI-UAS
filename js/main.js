@@ -48,12 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
             <a href="history.html" class="btn btn-icon" title="Riwayat Transaksi">
                 <i class="fa-solid fa-clock-rotate-left"></i>
             </a>
-            <div class="nav-user-profile" style="display:flex;align-items:center;gap:0.5rem;">
+            <a href="profil.html" class="nav-user-profile" style="display:flex;align-items:center;gap:0.5rem;text-decoration:none;cursor:pointer;">
                 <div style="width:34px;height:34px;border-radius:50%;background:var(--primary-light);color:var(--primary);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.8rem;">
                     ${userName.charAt(0).toUpperCase()}
                 </div>
                 <span style="font-weight:600;font-size:0.875rem;color:var(--text-main);">${userName}</span>
-            </div>
+            </a>
             <button class="btn btn-outline btn-sm" id="btn-logout" style="border-color:var(--danger);color:var(--danger);">
                 <i class="fa-solid fa-right-from-bracket"></i> Keluar
             </button>
