@@ -11,7 +11,6 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/produk.css">
 </head>
 <body>
 
@@ -76,22 +75,22 @@
              KLASTER 1: JASA TUTOR PRIVAT UTBK/SNBT
              ============================================ -->
         <div class="section-title" style="margin-bottom: 1.5rem; margin-top: 0.5rem;">
-            <h2 style="font-size: 1.5rem;"><i class="fa-solid fa-chalkboard-user" style="color: var(--primary); margin-right: 0.5rem;"></i>Jasa Tutor Privat UTBK</h2>
-            <p>Bimbingan tatap muka online bersama tutor ahli per-subtes UTBK/SNBT.</p>
+            <h2 style="font-size: 1.5rem;"><i class="fa-solid fa-video" style="color: var(--primary); margin-right: 0.5rem;"></i>Video Rekaman & Sesi Live</h2>
+            <p>Belajar lebih fleksibel dengan video materi on-demand dan paket kelas interaktif secara live.</p>
         </div>
 
         <div class="catalog-grid" style="margin-bottom: 3rem;">
 
-            <!-- Tutor 1: Intensif Privat PK -->
-            <article class="product-card" id="card-tutor-pk">
+            <!-- Video 1 -->
+            <article class="product-card" id="card-video-pk">
                 <div class="product-img">
                     <span class="product-badge">Terlaris</span>
-                    <img src="https://placehold.co/280x220/EDE9FE/6366F1?text=Tutor+PK" alt="Intensif Privat Pengetahuan Kuantitatif">
+                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=280&h=220&fit=crop" alt="Video Rekaman Pengetahuan Kuantitatif">
                 </div>
                 <div class="product-info">
-                    <span class="product-category">Jasa Tutor · PK</span>
-                    <h4><a href="produk-detail.html">Intensif Privat Pengetahuan Kuantitatif (PK)</a></h4>
-                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">Bimbingan 1-on-1 materi Pengetahuan Kuantitatif UTBK: Aritmetika, Aljabar, Geometri, dan Statistika dasar. Durasi 90 menit/sesi.</p>
+                    <span class="product-category">Video Rekaman · PK</span>
+                    <h4><a href="#">Paket Video Rekaman Pengetahuan Kuantitatif (PK)</a></h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">Akses selamanya ke 25+ video materi PK UTBK mulai dari konsep dasar hingga soal HOTS.</p>
                     <div class="product-rating">
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
@@ -101,28 +100,25 @@
                             <i class="fa-solid fa-star"></i>
                         </div>
                         <span class="score">5.0</span>
-                        <span class="reviews">(234)</span>
+                        <span class="reviews">(341)</span>
                     </div>
                     <div class="product-footer">
-                        <div>
-                            <span class="product-price">Rp 85.000</span>
-                            <span style="font-size: 0.75rem; color: var(--text-muted);">/sesi</span>
-                        </div>
-                        <button class="btn-add-cart" id="btn-cart-tutor-pk"><i class="fa-solid fa-cart-plus"></i> Pesan</button>
+                        <span class="product-price">Rp 120.000</span>
+                        <button class="btn-add-cart" id="btn-cart-video-pk" data-id="video-pk" data-name="Video Rekaman PK" data-price="120000" data-img="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=300&h=200&fit=crop" data-cat="Video E-Learning" onclick="window.addToCart(this)"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
                     </div>
                 </div>
             </article>
 
-            <!-- Tutor 2: Kelas Kilat PM -->
-            <article class="product-card" id="card-tutor-pm">
+            <!-- Live 1 -->
+            <article class="product-card" id="card-live-intensif">
                 <div class="product-img">
-                    <span class="product-badge" style="background: var(--primary);">Kelas Kilat</span>
-                    <img src="https://placehold.co/280x220/EDE9FE/6366F1?text=Tutor+PM" alt="Kelas Kilat Penalaran Matematika">
+                    <span class="product-badge" style="background: var(--primary);">Kelas Live</span>
+                    <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=280&h=220&fit=crop" alt="Paket Live Class Intensif UTBK">
                 </div>
                 <div class="product-info">
-                    <span class="product-category">Jasa Tutor · PM</span>
-                    <h4><a href="produk-detail.html">Kelas Kilat Penalaran Matematika (PM)</a></h4>
-                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">Drilling soal Penalaran Matematika UTBK: pola bilangan, logika, pemodelan, dan pemecahan masalah. Durasi 90 menit/sesi.</p>
+                    <span class="product-category">Sesi Live · All Subtes</span>
+                    <h4><a href="#">Paket Live Class Intensif UTBK (1 Bulan)</a></h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">12 sesi live via Zoom membahas tuntas seluruh subtes UTBK bersama Master Tutor. Termasuk rekaman kelas.</p>
                     <div class="product-rating">
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
@@ -132,27 +128,24 @@
                             <i class="fa-solid fa-star-half-stroke"></i>
                         </div>
                         <span class="score">4.9</span>
-                        <span class="reviews">(187)</span>
+                        <span class="reviews">(128)</span>
                     </div>
                     <div class="product-footer">
-                        <div>
-                            <span class="product-price">Rp 90.000</span>
-                            <span style="font-size: 0.75rem; color: var(--text-muted);">/sesi</span>
-                        </div>
-                        <button class="btn-add-cart" id="btn-cart-tutor-pm"><i class="fa-solid fa-cart-plus"></i> Pesan</button>
+                        <span class="product-price">Rp 350.000</span>
+                        <button class="btn-add-cart" id="btn-cart-live-intensif" data-id="live-intensif" data-name="Paket Live Class 1 Bulan" data-price="350000" data-img="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=300&h=200&fit=crop" data-cat="Paket Sesi Live" onclick="window.addToCart(this)"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
                     </div>
                 </div>
             </article>
 
-            <!-- Tutor 3: Intensif Literasi -->
-            <article class="product-card" id="card-tutor-literasi">
+            <!-- Video 2 -->
+            <article class="product-card" id="card-video-literasi">
                 <div class="product-img">
-                    <img src="https://placehold.co/280x220/EDE9FE/6366F1?text=Tutor+Literasi" alt="Bimbingan Literasi Bahasa Indonesia & Inggris">
+                    <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=280&h=220&fit=crop" alt="Video Rekaman Literasi">
                 </div>
                 <div class="product-info">
-                    <span class="product-category">Jasa Tutor · Literasi</span>
-                    <h4><a href="produk-detail.html">Bimbingan Literasi Bahasa Indonesia & Inggris</a></h4>
-                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">Latihan membaca kritis, inferensi teks, dan pemahaman bacaan bilingual. Cocok untuk subtes Literasi UTBK. 90 menit/sesi.</p>
+                    <span class="product-category">Video Rekaman · Literasi</span>
+                    <h4><a href="#">Paket Video Rekaman Literasi (Indo & Inggris)</a></h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">Modul video terstruktur untuk membedah teks panjang dan menjawab pertanyaan literasi dengan cepat.</p>
                     <div class="product-rating">
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
@@ -162,28 +155,25 @@
                             <i class="fa-solid fa-star-half-stroke"></i>
                         </div>
                         <span class="score">4.8</span>
-                        <span class="reviews">(112)</span>
+                        <span class="reviews">(94)</span>
                     </div>
                     <div class="product-footer">
-                        <div>
-                            <span class="product-price">Rp 80.000</span>
-                            <span style="font-size: 0.75rem; color: var(--text-muted);">/sesi</span>
-                        </div>
-                        <button class="btn-add-cart" id="btn-cart-tutor-literasi"><i class="fa-solid fa-cart-plus"></i> Pesan</button>
+                        <span class="product-price">Rp 110.000</span>
+                        <button class="btn-add-cart" id="btn-cart-video-literasi" data-id="video-literasi" data-name="Video Rekaman Literasi" data-price="110000" data-img="https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=300&h=200&fit=crop" data-cat="Video E-Learning" onclick="window.addToCart(this)"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
                     </div>
                 </div>
             </article>
 
-            <!-- Tutor 4: Penalaran Umum -->
-            <article class="product-card" id="card-tutor-pu">
+            <!-- Live 2 -->
+            <article class="product-card" id="card-live-pm">
                 <div class="product-img">
-                    <span class="product-badge" style="background: var(--warning);">Diskon 25%</span>
-                    <img src="https://placehold.co/280x220/EDE9FE/6366F1?text=Tutor+PU" alt="Privat Penalaran Umum">
+                    <span class="product-badge" style="background: var(--warning);">Diskon 10%</span>
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=280&h=220&fit=crop" alt="Sesi Live Penalaran Matematika">
                 </div>
                 <div class="product-info">
-                    <span class="product-category">Jasa Tutor · PU</span>
-                    <h4><a href="produk-detail.html">Privat Penalaran Umum (PU) UTBK</a></h4>
-                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">Penguatan logika, analisis argumen, dan penalaran induktif-deduktif. Strategi menjawab soal PU secara efisien. 90 menit/sesi.</p>
+                    <span class="product-category">Sesi Live · PM</span>
+                    <h4><a href="#">Sesi Live Group Penalaran Matematika (4 Pertemuan)</a></h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">Belajar berkelompok via Zoom (max 10 orang/kelas) khusus bedah soal Penalaran Matematika sulit.</p>
                     <div class="product-rating">
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
@@ -193,14 +183,14 @@
                             <i class="fa-solid fa-star"></i>
                         </div>
                         <span class="score">4.9</span>
-                        <span class="reviews">(98)</span>
+                        <span class="reviews">(67)</span>
                     </div>
                     <div class="product-footer">
                         <div class="price-group">
-                            <span class="price-old">Rp 100.000</span>
-                            <span class="product-price">Rp 75.000</span>
+                            <span class="price-old">Rp 200.000</span>
+                            <span class="product-price">Rp 180.000</span>
                         </div>
-                        <button class="btn-add-cart" id="btn-cart-tutor-pu"><i class="fa-solid fa-cart-plus"></i> Pesan</button>
+                        <button class="btn-add-cart" id="btn-cart-live-pm" data-id="live-pm" data-name="Live Group PM (4x)" data-price="180000" data-img="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=300&h=200&fit=crop" data-cat="Paket Sesi Live" onclick="window.addToCart(this)"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
                     </div>
                 </div>
             </article>
@@ -221,7 +211,7 @@
             <article class="product-card" id="card-grand-master">
                 <div class="product-img">
                     <span class="product-badge">Best Seller</span>
-                    <img src="https://placehold.co/280x220/F8FAFC/7C3AED?text=Grand+Master+UTBK" alt="Buku Grand Master Bank Soal Lolos PTN">
+                    <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=280&h=220&fit=crop" alt="Buku Grand Master Bank Soal Lolos PTN">
                 </div>
                 <div class="product-info">
                     <span class="product-category">Buku Soal · UTBK</span>
@@ -240,7 +230,7 @@
                     </div>
                     <div class="product-footer">
                         <span class="product-price">Rp 145.000</span>
-                        <button class="btn-add-cart" id="btn-cart-grandmaster"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
+                        <button class="btn-add-cart" id="btn-cart-grandmaster" data-id="book-grandmaster" data-name="Buku Grand Master UTBK SNBT 2024" data-price="185000" data-img="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=300&h=200&fit=crop" data-cat="Buku Fisik" onclick="window.addToCart(this)"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
                     </div>
                 </div>
             </article>
@@ -248,7 +238,7 @@
             <!-- Buku 2: Modul Ringkasan PK -->
             <article class="product-card" id="card-modul-pk">
                 <div class="product-img">
-                    <img src="https://placehold.co/280x220/F8FAFC/7C3AED?text=Modul+PK" alt="Modul Ringkasan Pengetahuan Kuantitatif">
+                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=280&h=220&fit=crop" alt="Modul Ringkasan Pengetahuan Kuantitatif">
                 </div>
                 <div class="product-info">
                     <span class="product-category">Modul Belajar · PK</span>
@@ -267,7 +257,7 @@
                     </div>
                     <div class="product-footer">
                         <span class="product-price">Rp 55.000</span>
-                        <button class="btn-add-cart" id="btn-cart-modul-pk"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
+                        <button class="btn-add-cart" id="btn-cart-modul-pk" data-id="modul-pk" data-name="Modul Cetak Bank Soal PK & PM" data-price="95000" data-img="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300&h=200&fit=crop" data-cat="Buku Fisik" onclick="window.addToCart(this)"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
                     </div>
                 </div>
             </article>
@@ -276,7 +266,7 @@
             <article class="product-card" id="card-paket-combo">
                 <div class="product-img">
                     <span class="product-badge" style="background: var(--primary);">Best Value</span>
-                    <img src="https://placehold.co/280x220/F8FAFC/7C3AED?text=Paket+Combo+UTBK" alt="Paket Combo 4 Subtes UTBK">
+                    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=280&h=220&fit=crop" alt="Paket Combo 4 Subtes UTBK">
                 </div>
                 <div class="product-info">
                     <span class="product-category">Paket Buku · UTBK</span>
@@ -298,34 +288,34 @@
                             <span class="price-old">Rp 220.000</span>
                             <span class="product-price">Rp 155.000</span>
                         </div>
-                        <button class="btn-add-cart" id="btn-cart-combo"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
+                        <button class="btn-add-cart" id="btn-cart-combo" data-id="combo-snbt" data-name="Paket Combo Sukses SNBT (4 Buku)" data-price="450000" data-img="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=300&h=200&fit=crop" data-cat="Buku Fisik" onclick="window.addToCart(this)"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
                     </div>
                 </div>
             </article>
 
-            <!-- Buku 4: Flashcard Rumus -->
-            <article class="product-card" id="card-flashcard-rumus">
+            <!-- Buku 4: Buku Soal Literasi -->
+            <article class="product-card" id="card-buku-literasi">
                 <div class="product-img">
-                    <img src="https://placehold.co/280x220/F8FAFC/7C3AED?text=Flashcard+Rumus" alt="Flashcard Rumus Cepat UTBK">
+                    <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=280&h=220&fit=crop" alt="Buku Sukses Literasi Bahasa Inggris">
                 </div>
                 <div class="product-info">
-                    <span class="product-category">Alat Bantu Belajar</span>
-                    <h4><a href="produk-detail.html">Flashcard Rumus Cepat UTBK (200 Kartu)</a></h4>
-                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">200 kartu flashcard full-color berisi rumus, trik, dan pola soal PK & PM. Desain eye-catching, mudah dihafal.</p>
+                    <span class="product-category">Buku Soal · Literasi</span>
+                    <h4><a href="produk-detail.html">Buku Sukses Literasi Bahasa Inggris UTBK</a></h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">Fokus bedah soal teks panjang (reading comprehension) Bahasa Inggris khas UTBK SNBT, lengkap dengan vocab penting.</p>
                     <div class="product-rating">
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
                         </div>
-                        <span class="score">4.9</span>
-                        <span class="reviews">(74)</span>
+                        <span class="score">4.7</span>
+                        <span class="reviews">(62)</span>
                     </div>
                     <div class="product-footer">
-                        <span class="product-price">Rp 42.000</span>
-                        <button class="btn-add-cart" id="btn-cart-flashcard"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
+                        <span class="product-price">Rp 65.000</span>
+                        <button class="btn-add-cart" id="btn-cart-buku-literasi" data-id="buku-literasi" data-name="Buku Literasi B. Inggris SNBT" data-price="65000" data-img="https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=300&h=200&fit=crop" data-cat="Buku Fisik" onclick="window.addToCart(this)"><i class="fa-solid fa-cart-plus"></i> Keranjang</button>
                     </div>
                 </div>
             </article>

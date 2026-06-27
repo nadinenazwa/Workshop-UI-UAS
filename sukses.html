@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran Sukses | Tutorin</title>
+    <meta name="description" content="Pembayaran berhasil. Terima kasih telah berbelanja di Tutorin.">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                Tutor<span>in</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="index.html#fitur">Fitur</a>
+                <a href="tutor.html">Cari Tutor</a>
+                <a href="produk.html">Produk Belajar</a>
+                <a href="artikel.html">Artikel</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline btn-sm">Masuk</a>
+                <a href="daftar.html" class="btn btn-primary btn-sm">Daftar</a>
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 4rem; padding-bottom: 5rem;">
+
+        <!-- Step Indicator -->
+        <div class="step-indicator" style="margin-bottom: 3rem;" role="navigation" aria-label="Langkah checkout">
+            <div class="step done">
+                <span class="step-circle"><i class="fa-solid fa-check" style="font-size: 0.75rem;"></i></span>
+                <span class="step-label">Keranjang</span>
+            </div>
+            <span class="step-line done"></span>
+            <div class="step done">
+                <span class="step-circle"><i class="fa-solid fa-check" style="font-size: 0.75rem;"></i></span>
+                <span class="step-label">Pembayaran</span>
+            </div>
+            <span class="step-line done"></span>
+            <div class="step active">
+                <span class="step-circle">3</span>
+                <span class="step-label">Selesai</span>
+            </div>
+        </div>
+
+        <!-- Success Message -->
+        <div style="max-width: 600px; margin: 0 auto; text-align: center; background: var(--surface); padding: 3rem 2rem; border-radius: var(--radius-xl); border: 1px solid var(--border-color); box-shadow: var(--shadow-md);">
+            <div style="width: 80px; height: 80px; background: var(--success); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin: 0 auto 1.5rem; box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h1 style="font-size: 1.75rem; margin-bottom: 0.5rem; color: var(--text-main);">Pembayaran Berhasil!</h1>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">Terima kasih, pesananmu sedang kami proses.</p>
+
+            <div style="background: var(--bg-light); border-radius: var(--radius-md); padding: 1.5rem; margin-bottom: 2rem; text-align: left;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; border-bottom: 1px dashed var(--border-color); padding-bottom: 1rem;">
+                    <span style="color: var(--text-muted); font-size: 0.9rem;">Nomor Order</span>
+                    <strong style="color: var(--text-main);" id="order-number">TRX-...</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                    <span style="color: var(--text-muted); font-size: 0.9rem;">Tanggal</span>
+                    <strong style="color: var(--text-main);" id="order-date">-</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                    <span style="color: var(--text-muted); font-size: 0.9rem;">Metode Pembayaran</span>
+                    <strong style="color: var(--text-main);" id="order-method">-</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                    <span style="font-weight: 600; color: var(--text-main);">Total Pembayaran</span>
+                    <strong style="color: var(--primary); font-size: 1.1rem;" id="order-total">-</strong>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <a href="produk.html" class="btn btn-outline">Belanja Lagi</a>
+                <a href="history.html" class="btn btn-primary">Lihat Riwayat Transaksi</a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Tutor<span>in</span>
+                    </a>
+                    <p>Platform edukasi terpadu yang membantu pelajar Indonesia mencapai potensi maksimal melalui bimbingan tutor, akses buku, dan materi pembelajaran yang berkualitas.</p>
+                </div>
+                <!-- Links omitted for brevity, same as other pages -->
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tutorin. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get last transaction from local storage
+            const txns = JSON.parse(localStorage.getItem('transactions')) || [];
+            if (txns.length > 0) {
+                const lastTx = txns[0];
+                document.getElementById('order-number').innerText = lastTx.id;
+                document.getElementById('order-date').innerText = lastTx.date;
+                document.getElementById('order-method').innerText = (lastTx.method || 'QRIS / Transfer').toUpperCase();
+                document.getElementById('order-total').innerText = 'Rp ' + lastTx.total.toLocaleString('id-ID');
+            }
+        });
+    </script>
+</body>
+</html>

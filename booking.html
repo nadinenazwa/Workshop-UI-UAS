@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Sesi Tutor | Tutorin</title>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .booking-container {
+            max-width: 800px;
+            margin: 3rem auto;
+            background: var(--surface);
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .booking-header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            padding: 2.5rem 2rem;
+            color: white;
+            text-align: center;
+        }
+
+        .booking-header h1 {
+            color: white;
+            margin-bottom: 0.5rem;
+            font-size: 1.75rem;
+        }
+
+        .booking-header p {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.95rem;
+        }
+
+        .booking-body {
+            padding: 2.5rem;
+        }
+
+        .tutor-summary {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: var(--background);
+            border-radius: 0.75rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+        }
+
+        .tutor-summary img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-light);
+        }
+
+        .tutor-summary h3 {
+            margin-bottom: 0.25rem;
+            color: var(--text-main);
+        }
+
+        .tutor-summary p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tutor-badge {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 0.25rem 0.75rem;
+            border-radius: 2rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px var(--primary-light);
+        }
+
+        /* Time Slot Radio Buttons */
+        .time-slots {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 1rem;
+        }
+
+        .time-slot-label {
+            display: block;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .time-slot-label input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .time-slot-box {
+            display: block;
+            padding: 0.75rem;
+            text-align: center;
+            background: var(--background);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+
+        .time-slot-label:hover .time-slot-box {
+            background: var(--primary-light);
+            border-color: var(--primary);
+        }
+
+        .time-slot-label input:checked ~ .time-slot-box {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .booking-actions {
+            margin-top: 2.5rem;
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .tutor-summary {
+                flex-direction: column;
+                text-align: center;
+            }
+            .booking-actions {
+                flex-direction: column-reverse;
+            }
+            .booking-actions .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                Tutor<span>in</span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="tutor.html" class="active">Cari Tutor</a>
+                <a href="produk.html">Produk Belajar</a>
+                <a href="artikel.html">Artikel</a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Cart Badge Placeholder -->
+                <a href="keranjang.html" class="cart-icon" id="nav-cart-btn" aria-label="Keranjang Belanja">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge" id="nav-cart-badge" style="display: none;">0</span>
+                </a>
+                
+                <!-- Account Dropdown Placeholder -->
+                <div class="user-menu" id="nav-user-menu" style="display:none; position: relative;">
+                    <button class="btn btn-outline btn-sm" id="btn-user-dropdown" style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fa-solid fa-user-circle"></i>
+                        <span id="nav-user-name">Siswa</span>
+                    </button>
+                    <div class="dropdown-content" id="user-dropdown-content" style="display: none; position: absolute; right: 0; top: 110%; background: white; border: 1px solid var(--border); border-radius: 0.5rem; box-shadow: var(--shadow-md); min-width: 150px; overflow: hidden; z-index: 10;">
+                        <a href="dashboard.html" id="link-admin-panel" style="display:none; padding: 0.75rem 1rem; color: var(--text-main); text-decoration: none; border-bottom: 1px solid var(--border);"><i class="fa-solid fa-gauge" style="margin-right: 0.5rem; color: var(--primary);"></i> Admin Panel</a>
+                        <a href="history.html" style="display: block; padding: 0.75rem 1rem; color: var(--text-main); text-decoration: none; border-bottom: 1px solid var(--border);"><i class="fa-solid fa-clock-rotate-left" style="margin-right: 0.5rem;"></i> Riwayat</a>
+                        <a href="#" id="btn-logout" style="display: block; padding: 0.75rem 1rem; color: var(--danger); text-decoration: none;"><i class="fa-solid fa-right-from-bracket" style="margin-right: 0.5rem;"></i> Keluar</a>
+                    </div>
+                </div>
+
+                <!-- Login/Register Placeholder -->
+                <div id="nav-auth-buttons">
+                    <a href="login.html" class="btn btn-outline btn-sm">Masuk</a>
+                    <a href="daftar.html" class="btn btn-primary btn-sm">Daftar</a>
+                </div>
+
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="booking-container">
+            <div class="booking-header">
+                <h1>Jadwalkan Sesi Bimbingan</h1>
+                <p>Pilih waktu yang tepat untuk belajar bersama tutor pilihanmu.</p>
+            </div>
+            
+            <div class="booking-body">
+                <form id="booking-form" action="konfirmasi-booking.html">
+                    
+                    <!-- Tutor Info -->
+                    <div class="tutor-summary" id="tutor-summary-box">
+                        <img src="https://placehold.co/120x120/EEF2FF/4F46E5?text=R" alt="Tutor Avatar" id="book-tutor-img">
+                        <div>
+                            <h3 id="book-tutor-name">Tutor Rizky - PK & PM</h3>
+                            <p id="book-tutor-desc">Ahli Pengetahuan Kuantitatif dan Penalaran Matematika. Lulusan S1 Matematika ITB.</p>
+                            <span class="tutor-badge" id="book-tutor-price">Rp 85.000 / sesi</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="booking-date">Pilih Tanggal</label>
+                        <input type="date" id="booking-date" class="form-control" required min="2024-06-28">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Pilih Waktu (WIB)</label>
+                        <div class="time-slots">
+                            <label class="time-slot-label">
+                                <input type="radio" name="booking-time" value="09:00" required>
+                                <span class="time-slot-box">09:00 - 10:30</span>
+                            </label>
+                            <label class="time-slot-label">
+                                <input type="radio" name="booking-time" value="11:00">
+                                <span class="time-slot-box">11:00 - 12:30</span>
+                            </label>
+                            <label class="time-slot-label">
+                                <input type="radio" name="booking-time" value="13:30">
+                                <span class="time-slot-box">13:30 - 15:00</span>
+                            </label>
+                            <label class="time-slot-label">
+                                <input type="radio" name="booking-time" value="15:30">
+                                <span class="time-slot-box">15:30 - 17:00</span>
+                            </label>
+                            <label class="time-slot-label">
+                                <input type="radio" name="booking-time" value="19:00">
+                                <span class="time-slot-box">19:00 - 20:30</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="booking-notes">Catatan untuk Tutor (Opsional)</label>
+                        <textarea id="booking-notes" class="form-control" rows="3" placeholder="Contoh: Tolong fokus ke materi Probabilitas dan Kombinatorika ya Kak."></textarea>
+                    </div>
+
+                    <div class="booking-actions">
+                        <a href="tutor.html" class="btn btn-outline">Batal</a>
+                        <button type="submit" class="btn btn-primary" id="btn-submit-booking">
+                            <i class="fa-regular fa-calendar-check" style="margin-right: 0.5rem;"></i> Konfirmasi Jadwal
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Footer sama dengan halaman lain -->
+        <div class="container" style="text-align: center; padding: 2rem 0; color: var(--text-muted); border-top: 1px solid var(--border); margin-top: 3rem;">
+            <p>&copy; 2024 Tutorin. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script>
+        // Simple logic to parse URL parameter to show correct tutor details
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const tutorId = params.get('tutor');
+            
+            const tutorNameEl = document.getElementById('book-tutor-name');
+            const tutorDescEl = document.getElementById('book-tutor-desc');
+            const tutorImgEl = document.getElementById('book-tutor-img');
+            
+            if (tutorId === 'diana') {
+                tutorNameEl.textContent = 'Tutor Diana - Literasi & PU';
+                tutorDescEl.textContent = 'Spesialis Literasi Bahasa Indonesia dan Penalaran Umum.';
+                tutorImgEl.src = 'https://placehold.co/120x120/FDF2F8/DB2777?text=D';
+            } else if (tutorId === 'budi') {
+                tutorNameEl.textContent = 'Tutor Budi - Matematika Dasar';
+                tutorDescEl.textContent = 'Fokus pada fondasi Matematika Dasar untuk persiapan masuk PTN.';
+                tutorImgEl.src = 'https://placehold.co/120x120/ECFEFF/0891B2?text=B';
+            } else if (tutorId === 'siti') {
+                tutorNameEl.textContent = 'Tutor Siti - Bahasa Inggris';
+                tutorDescEl.textContent = 'Ahli Literasi Bahasa Inggris dengan sertifikasi TOEFL/IELTS.';
+                tutorImgEl.src = 'https://placehold.co/120x120/FEF3C7/D97706?text=S';
+            }
+            
+            // Set minimum date to today
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('booking-date').setAttribute('min', today);
+            
+            // Handle form submit
+            document.getElementById('booking-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Get values
+                const date = document.getElementById('booking-date').value;
+                const time = document.querySelector('input[name="booking-time"]:checked').value;
+                const notes = document.getElementById('booking-notes').value;
+                const tName = tutorNameEl.textContent;
+                
+                // Save to localStorage so konfirmasi page can read it
+                const bookingData = {
+                    tutorName: tName,
+                    date: date,
+                    time: time,
+                    notes: notes,
+                    timestamp: new Date().toISOString()
+                };
+                
+                localStorage.setItem('tutorin_last_booking', JSON.stringify(bookingData));
+                
+                // Redirect to payment page instead of confirmation directly
+                window.location.href = 'pembayaran.html?type=booking';
+            });
+        });
+    </script>
+</body>
+</html>

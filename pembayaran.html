@@ -11,7 +11,6 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/transaksi.css">
 </head>
 <body>
 
@@ -163,28 +162,19 @@
                     </div>
 
                     <div class="order-item-mini">
-                        <img src="https://placehold.co/52x52/F8FAFC/7C3AED?text=Planner" alt="Study Planner">
+                        <img src="https://placehold.co/52x52/F8FAFC/7C3AED?text=Modul+PK" alt="Modul PK">
                         <div class="item-name">
-                            <h5>Study Planner Aesthetic 2024</h5>
-                            <span>2x</span>
-                        </div>
-                        <span class="item-price">Rp 130.000</span>
-                    </div>
-
-                    <div class="order-item-mini">
-                        <img src="https://placehold.co/52x52/F8FAFC/7C3AED?text=E-Book" alt="E-Book Web Dev">
-                        <div class="item-name">
-                            <h5>E-Book Dasar Pemrograman Web</h5>
+                            <h5>Modul Ringkasan PK</h5>
                             <span>1x</span>
                         </div>
-                        <span class="item-price">Rp 89.000</span>
+                        <span class="item-price">Rp 55.000</span>
                     </div>
 
                     <hr class="summary-divider" style="margin-top: 1rem;">
 
                     <div class="summary-row">
                         <span class="label">Subtotal</span>
-                        <span class="value">Rp 344.000</span>
+                        <span class="value">Rp 180.000</span>
                     </div>
                     <div class="summary-row">
                         <span class="label">Ongkos Kirim</span>
@@ -199,7 +189,7 @@
 
                     <div class="summary-row total">
                         <span class="label">Total Bayar</span>
-                        <span class="value">Rp 345.000</span>
+                        <span class="value">Rp 181.000</span>
                     </div>
 
                     <!-- Confirm Button -->
@@ -272,9 +262,47 @@
     <script src="js/main.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const isBooking = urlParams.get('type') === 'booking';
+
+        if (isBooking) {
+            // Ubah ringkasan pesanan khusus untuk booking
+            const orderSummaryBox = document.getElementById('order-summary');
+            const bookingData = JSON.parse(localStorage.getItem('tutorin_last_booking') || '{}');
+            const tutorName = bookingData.tutorName || 'Sesi Tutor Privat';
+            
+            orderSummaryBox.innerHTML = `
+                <h3><i class="fa-solid fa-calendar-check" style="color: var(--primary); margin-right: 0.5rem;"></i>Ringkasan Booking</h3>
+                
+                <div class="order-item-mini" style="margin-bottom: 1.5rem;">
+                    <img src="https://placehold.co/52x52/F8FAFC/7C3AED?text=Tutor" alt="Tutor">
+                    <div class="item-name">
+                        <h5>${tutorName}</h5>
+                        <span style="display:block; margin-top:0.25rem;">Jadwal: ${bookingData.date || '-'} | ${bookingData.time ? bookingData.time + ' WIB' : '-'}</span>
+                    </div>
+                </div>
+
+                <hr class="summary-divider">
+
+                <div class="summary-row total">
+                    <span class="label">Total Bayar</span>
+                    <span class="value">Rp 85.000</span>
+                </div>
+                
+                <div class="payment-confirm-area">
+                    <button class="btn btn-primary" id="btn-confirm-payment">
+                        <i class="fa-solid fa-lock" style="margin-right: 0.25rem;"></i> Konfirmasi Pembayaran
+                    </button>
+                    <div class="payment-secure">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Transaksi aman & terenkripsi</span>
+                    </div>
+                </div>
+            `;
+        }
+
         // Payment method selection
         const options = document.querySelectorAll('.payment-option');
-
         options.forEach(option => {
             option.addEventListener('click', () => {
                 options.forEach(o => o.classList.remove('selected'));
@@ -284,10 +312,11 @@
             });
         });
 
-        // Confirm button
-        const confirmBtn = document.getElementById('btn-confirm-payment');
-        if (confirmBtn) {
-            confirmBtn.addEventListener('click', () => {
+        // Confirm button (use delegation because the button might be recreated by innerHTML)
+        document.body.addEventListener('click', (e) => {
+            if (e.target && (e.target.id === 'btn-confirm-payment' || e.target.closest('#btn-confirm-payment'))) {
+                const confirmBtn = document.getElementById('btn-confirm-payment');
+                
                 confirmBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Memproses...';
                 confirmBtn.disabled = true;
                 confirmBtn.style.opacity = '0.7';
@@ -298,9 +327,54 @@
                     confirmBtn.style.borderColor = 'var(--success)';
                     confirmBtn.style.opacity = '1';
                     confirmBtn.style.boxShadow = '0 10px 15px -3px rgba(16, 185, 129, 0.3)';
+                    
+                    if (!isBooking && typeof window.checkout === 'function') {
+                        // Call cart checkout logic from main.js
+                        window.checkout();
+                    } else if (isBooking) {
+                        // Create transaction for booking manually
+                        const txns = JSON.parse(localStorage.getItem('transactions')) || [];
+                        const bookingData = JSON.parse(localStorage.getItem('tutorin_last_booking') || '{}');
+                        const tutorName = bookingData.tutorName || 'Sesi Tutor Privat';
+                        
+                        const methodEl = document.querySelector('input[name="payment"]:checked');
+                        const method = methodEl ? methodEl.value : 'qris';
+                        
+                        const d = new Date();
+                        const dateStr = d.toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' }) + ', ' + d.getHours().toString().padStart(2, '0') + ':' + d.getMinutes().toString().padStart(2, '0') + ' WIB';
+                        
+                        const newTx = {
+                            id: 'TRX-' + d.getFullYear() + (d.getMonth()+1).toString().padStart(2,'0') + d.getDate().toString().padStart(2,'0') + '-' + Math.floor(Math.random() * 1000).toString().padStart(3,'0'),
+                            date: dateStr,
+                            items: [
+                                {
+                                    name: tutorName,
+                                    price: 85000,
+                                    qty: 1,
+                                    img: "https://placehold.co/120x120/EEF2FF/4F46E5?text=T",
+                                    cat: "Jasa Tutor"
+                                }
+                            ],
+                            total: 85000,
+                            method: method,
+                            status: 'success'
+                        };
+                        
+                        txns.unshift(newTx);
+                        localStorage.setItem('transactions', JSON.stringify(txns));
+                    }
+
+                    // Redirect logic
+                    setTimeout(() => {
+                        if (isBooking) {
+                            window.location.href = 'konfirmasi-booking.html';
+                        } else {
+                            window.location.href = 'sukses.html';
+                        }
+                    }, 1000);
                 }, 2000);
-            });
-        }
+            }
+        });
     });
     </script>
 </body>
