@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya - Tutorin</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css?v=4">
+    <link rel="stylesheet" href="css/profil.css">
+    <link rel="stylesheet" href="css/auth.css"> <!-- Reuse some form input styles -->
+</head>
+<body class="bg-light">
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                Tutorin
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="tutor.html">Cari Tutor</a>
+                <a href="produk.html">Produk Belajar</a>
+                <a href="artikel.html">Artikel</a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Logged in state -->
+                <a href="profil.html" style="text-decoration: none;">
+                    <div class="header-profile" style="display: flex; align-items: center; gap: 0.75rem;">
+                        <img src="https://placehold.co/100x100/4F46E5/FFFFFF?text=A" alt="Avatar" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                        <div class="profile-info" style="display: flex; flex-direction: column;">
+                            <span style="font-weight: 600; font-size: 0.875rem; color: var(--text-main);">Alifio Rafi</span>
+                            <span style="font-size: 0.75rem; color: var(--text-muted);">Siswa</span>
+                        </div>
+                    </div>
+                </a>
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container" style="padding-top: 120px; padding-bottom: 4rem;">
+        
+        <div class="profile-container">
+            
+            <!-- Sidebar -->
+            <aside class="profile-sidebar">
+                <div class="profile-avatar-wrapper">
+                    <img src="https://placehold.co/200x200/4F46E5/FFFFFF?text=A" alt="Profile Picture" class="profile-avatar">
+                    <button class="avatar-edit-btn" title="Ubah Foto">
+                        <i class="fa-solid fa-camera"></i>
+                    </button>
+                </div>
+                <h2 class="profile-name">Alifio Rafi</h2>
+                <p class="profile-email">alifio.rafi@student.com</p>
+                
+                <nav class="profile-menu">
+                    <a href="profil.html" class="profile-menu-item active">
+                        <i class="fa-solid fa-user"></i> Data Diri
+                    </a>
+                    <a href="history.html" class="profile-menu-item">
+                        <i class="fa-solid fa-clock-rotate-left"></i> Riwayat Transaksi
+                    </a>
+                    <a href="#" class="profile-menu-item">
+                        <i class="fa-solid fa-bookmark"></i> Kelas Tersimpan
+                    </a>
+                    <a href="index.html" class="profile-menu-item danger">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i> Keluar
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- Content Area -->
+            <div class="profile-content">
+                
+                <!-- Personal Data Form -->
+                <section class="profile-card">
+                    <div class="profile-card-header">
+                        <h3>Informasi Data Diri</h3>
+                        <p>Perbarui informasi profil dan detail kontak Anda.</p>
+                    </div>
+                    
+                    <form action="#" method="POST">
+                        <div class="profile-form-grid">
+                            <div class="form-group">
+                                <label for="fullname">Nama Lengkap</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-user"></i>
+                                    <input type="text" id="fullname" class="form-control" value="Alifio Rafi" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Alamat Email</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-envelope"></i>
+                                    <input type="email" id="email" class="form-control" value="alifio.rafi@student.com" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Nomor WhatsApp</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <input type="tel" id="phone" class="form-control" value="081234567890">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="school">Asal Sekolah</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-school"></i>
+                                    <input type="text" id="school" class="form-control" value="SMAN 1 Jakarta">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="target">Target Kampus / Jurusan</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-bullseye"></i>
+                                    <input type="text" id="target" class="form-control" placeholder="Misal: Universitas Indonesia - Ilmu Komputer">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-form-actions">
+                            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Change Password Form -->
+                <section class="profile-card">
+                    <div class="profile-card-header">
+                        <h3>Ubah Password</h3>
+                        <p>Pastikan akun Anda menggunakan password yang kuat dan aman.</p>
+                    </div>
+                    
+                    <form action="#" method="POST">
+                        <div class="profile-form-grid">
+                            <div class="form-group full-width">
+                                <label for="old_password">Password Saat Ini</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-lock"></i>
+                                    <input type="password" id="old_password" class="form-control" placeholder="Masukkan password saat ini">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="new_password">Password Baru</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-key"></i>
+                                    <input type="password" id="new_password" class="form-control" placeholder="Buat password baru">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirm_password">Konfirmasi Password Baru</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-key"></i>
+                                    <input type="password" id="confirm_password" class="form-control" placeholder="Ulangi password baru">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-form-actions">
+                            <button type="submit" class="btn btn-primary" style="background-color: var(--text-main);">Perbarui Password</button>
+                        </div>
+                    </form>
+                </section>
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Tutorin
+                </a>
+                <p>Platform edukasi terpadu yang membantu pelajar Indonesia mencapai potensi maksimal melalui bimbingan tutor, akses buku, dan materi pembelajaran yang berkualitas.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Produk</h3>
+                <ul>
+                    <li><a href="tutor.html">Cari Tutor</a></li>
+                    <li><a href="produk.html">Buku Persiapan</a></li>
+                    <li><a href="produk.html">Modul Belajar</a></li>
+                    <li><a href="produk.html">Try Out Online</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Perusahaan</h3>
+                <ul>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Karir</a></li>
+                    <li><a href="#">Hubungi Kami</a></li>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Hubungi Kami</h3>
+                <div class="contact-info">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Jl. Pendidikan No. 123, Jakarta Selatan</span>
+                </div>
+                <div class="contact-info">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>halo@tutorin.id</span>
+                </div>
+                <div class="contact-info">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>0812-3456-7890</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2024 Tutorin. Hak Cipta Dilindungi.</p>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
