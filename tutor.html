@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cari Tutor UTBK | Tutorin</title>
+    <meta name="description" content="Temukan tutor privat terbaik untuk persiapan UTBK SNBT. Belajar PK, PM, PU, dan Literasi bersama mahasiswa dari PTN ternama.">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tutor.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                Tutor<span>in</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="index.html#fitur">Fitur</a>
+                <a href="tutor.html" class="active">Cari Tutor</a>
+                <a href="produk.html">Produk Belajar</a>
+                <a href="artikel.html">Artikel</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline btn-sm">Masuk</a>
+                <a href="daftar.html" class="btn btn-primary btn-sm">Daftar</a>
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="tutor-header">
+        <div class="container">
+            <h1>Temukan Tutor UTBK Favoritmu</h1>
+            <p>Belajar 1-on-1 bersama mahasiswa berprestasi dari UI, ITB, UGM, dan PTN ternama lainnya. Pilih tutor yang sesuai dengan kebutuhan belajarmu.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container" style="padding-bottom: 4rem;">
+
+        <!-- Search & Filter Bar -->
+        <div class="tutor-search-section">
+            <div class="search-bar">
+                <div class="search-input-group">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Cari nama tutor atau universitas...">
+                </div>
+                <button class="btn btn-primary">Cari</button>
+            </div>
+            
+            <div class="filter-group">
+                <select class="filter-select">
+                    <option value="">Semua Subtes UTBK</option>
+                    <option value="pk">Pengetahuan Kuantitatif (PK)</option>
+                    <option value="pm">Penalaran Matematika (PM)</option>
+                    <option value="pu">Penalaran Umum (PU)</option>
+                    <option value="literasi">Literasi B. Indonesia & Inggris</option>
+                </select>
+
+                <select class="filter-select">
+                    <option value="">Asal Universitas</option>
+                    <option value="ui">Universitas Indonesia</option>
+                    <option value="itb">Institut Teknologi Bandung</option>
+                    <option value="ugm">Universitas Gadjah Mada</option>
+                    <option value="unpad">Universitas Padjadjaran</option>
+                </select>
+
+                <select class="filter-select">
+                    <option value="">Harga</option>
+                    <option value="low">Terendah ke Tertinggi</option>
+                    <option value="high">Tertinggi ke Terendah</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Tutor Grid -->
+        <div class="tutor-grid">
+            
+            <!-- Tutor 1 -->
+            <article class="tutor-profile-card">
+                <img src="https://placehold.co/80x80/EDE9FE/6366F1?text=A" alt="Tutor" class="tutor-avatar">
+                <h3 class="tutor-name">Arya Wicaksana</h3>
+                <span class="tutor-univ"><i class="fa-solid fa-building-columns" style="margin-right:0.25rem;"></i>STEI ITB</span>
+                
+                <div class="tutor-subjects">
+                    <span class="subject-tag">PK</span>
+                    <span class="subject-tag">PM</span>
+                </div>
+
+                <div class="tutor-stats">
+                    <div class="tutor-stat-item">
+                        <i class="fa-solid fa-star"></i> 5.0 (124)
+                    </div>
+                    <div class="tutor-stat-item">
+                        <i class="fa-solid fa-users"></i> 300+ Jam
+                    </div>
+                </div>
+
+                <div class="tutor-price">
+                    <div>Rp 85.000<br><span>/ sesi (90 mnt)</span></div>
+                    <a href="keranjang.html" class="btn btn-primary btn-sm btn-book">Pesan</a>
+                </div>
+            </article>
+
+            <!-- Tutor 2 -->
+            <article class="tutor-profile-card">
+                <img src="https://placehold.co/80x80/EDE9FE/6366F1?text=N" alt="Tutor" class="tutor-avatar">
+                <h3 class="tutor-name">Nadine Salsabila</h3>
+                <span class="tutor-univ"><i class="fa-solid fa-building-columns" style="margin-right:0.25rem;"></i>Fasilkom UI</span>
+                
+                <div class="tutor-subjects">
+                    <span class="subject-tag">Literasi</span>
+                    <span class="subject-tag">PU</span>
+                </div>
+
+                <div class="tutor-stats">
+                    <div class="tutor-stat-item">
+                        <i class="fa-solid fa-star"></i> 4.9 (89)
+                    </div>
+                    <div class="tutor-stat-item">
+                        <i class="fa-solid fa-users"></i> 200+ Jam
+                    </div>
+                </div>
+
+                <div class="tutor-price">
+                    <div>Rp 80.000<br><span>/ sesi (90 mnt)</span></div>
+                    <a href="keranjang.html" class="btn btn-primary btn-sm btn-book">Pesan</a>
+                </div>
+            </article>
+
+            <!-- Tutor 3 -->
+            <article class="tutor-profile-card">
+                <img src="https://placehold.co/80x80/EDE9FE/6366F1?text=K" alt="Tutor" class="tutor-avatar">
+                <h3 class="tutor-name">Kevin Pratama</h3>
+                <span class="tutor-univ"><i class="fa-solid fa-building-columns" style="margin-right:0.25rem;"></i>Matematika UGM</span>
+                
+                <div class="tutor-subjects">
+                    <span class="subject-tag">PM</span>
+                    <span class="subject-tag">PK</span>
+                </div>
+
+                <div class="tutor-stats">
+                    <div class="tutor-stat-item">
+                        <i class="fa-solid fa-star"></i> 4.8 (156)
+                    </div>
+                    <div class="tutor-stat-item">
+                        <i class="fa-solid fa-users"></i> 450+ Jam
+                    </div>
+                </div>
+
+                <div class="tutor-price">
+                    <div>Rp 90.000<br><span>/ sesi (90 mnt)</span></div>
+                    <a href="keranjang.html" class="btn btn-primary btn-sm btn-book">Pesan</a>
+                </div>
+            </article>
+
+            <!-- Tutor 4 -->
+            <article class="tutor-profile-card">
+                <img src="https://placehold.co/80x80/EDE9FE/6366F1?text=S" alt="Tutor" class="tutor-avatar">
+                <h3 class="tutor-name">Siti Aisyah</h3>
+                <span class="tutor-univ"><i class="fa-solid fa-building-columns" style="margin-right:0.25rem;"></i>Sastra Inggris Unpad</span>
+                
+                <div class="tutor-subjects">
+                    <span class="subject-tag">Literasi B. Inggris</span>
+                </div>
+
+                <div class="tutor-stats">
+                    <div class="tutor-stat-item">
+                        <i class="fa-solid fa-star"></i> 4.9 (72)
+                    </div>
+                    <div class="tutor-stat-item">
+                        <i class="fa-solid fa-users"></i> 150+ Jam
+                    </div>
+                </div>
+
+                <div class="tutor-price">
+                    <div>Rp 75.000<br><span>/ sesi (90 mnt)</span></div>
+                    <a href="keranjang.html" class="btn btn-primary btn-sm btn-book">Pesan</a>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Tutor<span>in</span>
+                    </a>
+                    <p>Platform edukasi terpadu yang membantu pelajar Indonesia mencapai potensi maksimal melalui bimbingan tutor, akses buku, dan materi pembelajaran yang berkualitas.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="tutor.html">Cari Tutor</a></li>
+                        <li><a href="produk.html">Toko Buku & Alat</a></li>
+                        <li><a href="artikel.html">Artikel Edukasi</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Bantuan</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tutorin. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

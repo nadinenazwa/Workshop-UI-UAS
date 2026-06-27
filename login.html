@@ -148,45 +148,7 @@
 
     </div>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // Toggle password visibility
-        const toggleBtn = document.getElementById('toggle-login-pw');
-        const pwInput = document.getElementById('login-password');
-
-        if (toggleBtn && pwInput) {
-            toggleBtn.addEventListener('click', () => {
-                const isPassword = pwInput.type === 'password';
-                pwInput.type = isPassword ? 'text' : 'password';
-                toggleBtn.querySelector('i').classList.toggle('fa-eye');
-                toggleBtn.querySelector('i').classList.toggle('fa-eye-slash');
-            });
-        }
-
-        // Dummy form submit
-        const form = document.getElementById('login-form');
-        const submitBtn = document.getElementById('btn-login');
-
-        if (form) {
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Memproses...';
-                submitBtn.disabled = true;
-                submitBtn.style.opacity = '0.7';
-
-                setTimeout(() => {
-                    submitBtn.innerHTML = '<i class="fa-solid fa-circle-check"></i> Berhasil! Mengalihkan...';
-                    submitBtn.style.background = 'var(--success)';
-                    submitBtn.style.opacity = '1';
-                    submitBtn.style.boxShadow = '0 10px 15px -3px rgba(16, 185, 129, 0.3)';
-
-                    setTimeout(() => {
-                        window.location.href = 'index.html';
-                    }, 1500);
-                }, 1800);
-            });
-        }
-    });
-    </script>
+    <!-- Auth JS (login handler ada di main.js) -->
+    <script src="js/main.js"></script>
 </body>
 </html>

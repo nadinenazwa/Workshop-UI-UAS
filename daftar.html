@@ -183,62 +183,7 @@
 
     </div>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // Toggle password visibility (both fields)
-        const toggles = [
-            { btn: 'toggle-reg-pw', input: 'reg-password' },
-            { btn: 'toggle-reg-confirm', input: 'reg-confirm' }
-        ];
-
-        toggles.forEach(({ btn, input }) => {
-            const toggleBtn = document.getElementById(btn);
-            const pwInput = document.getElementById(input);
-
-            if (toggleBtn && pwInput) {
-                toggleBtn.addEventListener('click', () => {
-                    const isPassword = pwInput.type === 'password';
-                    pwInput.type = isPassword ? 'text' : 'password';
-                    toggleBtn.querySelector('i').classList.toggle('fa-eye');
-                    toggleBtn.querySelector('i').classList.toggle('fa-eye-slash');
-                });
-            }
-        });
-
-        // Dummy form submit
-        const form = document.getElementById('register-form');
-        const submitBtn = document.getElementById('btn-register');
-
-        if (form) {
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-
-                // Basic confirm-password check
-                const pw = document.getElementById('reg-password').value;
-                const confirm = document.getElementById('reg-confirm').value;
-
-                if (pw !== confirm) {
-                    alert('Password dan Konfirmasi Password tidak sama!');
-                    return;
-                }
-
-                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Membuat akun...';
-                submitBtn.disabled = true;
-                submitBtn.style.opacity = '0.7';
-
-                setTimeout(() => {
-                    submitBtn.innerHTML = '<i class="fa-solid fa-circle-check"></i> Akun Berhasil Dibuat!';
-                    submitBtn.style.background = 'var(--success)';
-                    submitBtn.style.opacity = '1';
-                    submitBtn.style.boxShadow = '0 10px 15px -3px rgba(16, 185, 129, 0.3)';
-
-                    setTimeout(() => {
-                        window.location.href = 'login.html';
-                    }, 1500);
-                }, 2000);
-            });
-        }
-    });
-    </script>
+    <!-- Auth JS (register handler ada di main.js) -->
+    <script src="js/main.js"></script>
 </body>
 </html>
