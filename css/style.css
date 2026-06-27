@@ -576,12 +576,15 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .product-price {
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   color: var(--primary);
+  white-space: nowrap;
 }
 
 /* Articles Section */
